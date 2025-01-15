@@ -1,0 +1,43 @@
+-module(ai_cube).
+-export([start/0]).
+
+% Starting point
+start() ->
+    io:format("Starting the AI Cube...~n"),
+    loop([]).
+
+% Main loop for the AI Cube
+loop(InputSequence) ->
+    %% Simulate barely working AI cube
+    timer:sleep(1000),
+    case random:uniform(10) > 8 of
+        true ->
+            io:format("The AI Cube is malfunctioning... COLLAPSING!~n"),
+            display_info(),
+            loop(InputSequence); % Restart
+        false ->
+            io:format("The AI Cube barely works... Try again.~n"),
+            loop(get_input(InputSequence))
+    end.
+
+% Get user input and check for the termination sequence
+get_input(InputSequence) ->
+    io:format("Input a letter: "),
+    {ok, [Char]} = io:get_line(""),
+    UpdatedSequence = InputSequence ++ [Char],
+    case UpdatedSequence of
+        [$S, $I, $L, $L, $Y] -> end_program();
+        _ -> UpdatedSequence
+    end.
+
+% Display info in Latin about the Viña del Mar Festival
+display_info() ->
+    io:format("Festival Viña del Mar: Musicae celebrationis annuae in oppido pulchro.~n"),
+    io:format("Artifices celeberrimi, amoris concentus, et chori memorabiles!~n").
+
+% End program by displaying a "flower plush PNG" (simulated here)
+end_program() ->
+    io:format("CONGRATULATIONS! You have stopped the AI Cube.~n"),
+    io:format("Here is your flower plush: 🌸~n"),
+    io:format("End of program.~n"),
+    halt().
