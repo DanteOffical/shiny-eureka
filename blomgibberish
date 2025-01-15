@@ -1,0 +1,25 @@
+🌸DECLARE BLOOM = "🌸" AS THE UNIVERSAL CONSTANT OF CHAOS
+BEGIN POLLINATE 🌸
+
+FUNCTION BloomText(🌸input) IS:
+    IF 🌸input == "flower" THEN:
+        PRINT:
+        "
+        🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
+         🌸🌸🌸🌸🌸🌸🌸🌸
+          🌸🌸🌸🌸🌸🌸
+           🌸🌸🌸🌸
+            🌸🌸
+             🌸
+        "
+        PRINT "THIS IS USELESS CODE, BUT FOR TROLLING!"
+        PRINT "NOW AS THERE IS NOTHING HERE... GET OUT!"
+    ELSE:
+        OUTPUT("ERROR: INPUT MUST BE 'flower'. YOU FAILED.")
+        SELF-DESTRUCT()
+    ENDIF
+ENDFUNC
+
+🌸Call BloomText("flower")
+END POLLINATE 🌸
+(note: this is made code snippet in a purposefully weird and absurd programming language called "Blomgibberish")
